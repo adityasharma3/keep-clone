@@ -40,7 +40,7 @@ body {
   }
 
   hr {
-    border: 1px solid rgba(255, 255, 255,0.4);
+    border: $border;
   }
 }
 
@@ -78,41 +78,25 @@ body {
   }
 }
 
-// .notes {
-//   display: flex;
-//   // flex-direction: row;
-//   flex-wrap: wrap;
-//   width: 12em;
-//   margin: 1em;
-  
-//   .note {
-//     position: relative;
-//     height:min-content;
-//     width: 12rem;
-//     display: flex;
-//     flex-direction: column;
-//     border : $border;
-//     margin: 1rem 1.75rem;
-//     text-align: left;
-//     border-radius: 1em;
-//     padding: 0.15rem 1rem;
-//   }
-// }
-
-.notes {
+.notes-collection {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 10%;
   
-  .note {
-    position: relative;
-    height:min-content;
-    width: 12rem;
+  .notes {
     display: flex;
     flex-direction: column;
-    border : $border;
-    margin: 1rem 1.75rem;
-    text-align: left;
+  }
+
+  .note {
+    padding: 0.5em 0.5rem 1rem 0.5rem;
+    margin: 1rem;
     border-radius: 1em;
-    padding: 0.15rem 1rem;
+    border: $border;
+    width: auto;
+    min-width: 10rem;
+    height: min-content;
+    text-align: left;
+    position: relative;
   }
 }

@@ -23,18 +23,18 @@ function App() {
       <InputSection 
           passNote = {addNote}
       />
-      {/* <Notes /> */}
 
-      {addItem.map((item,index) => {
-        return ( 
-          <Notes
-              className = "notes"
-              key = {index}
-              id = {index}
-              title = {item.title}
-              description = {item.description}
-          />);
-      })}
+      <div className = "notes-collection" >
+        {addItem.map((item,index) => {
+          return (
+            <Notes
+                key = {index}
+                id = {index}
+                title = {item.title}
+                description = {item.description}
+            />); 
+        })}
+      </div>
 
     </div>
   );
