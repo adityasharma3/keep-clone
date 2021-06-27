@@ -17,6 +17,10 @@ function InputSection(props) {
 
     const addEvent = () => {
         props.passNote(note);
+        setNote ({
+            title : '',
+            description : ''
+        });
     }
 
     const InputEvent = (event) => {
@@ -61,7 +65,7 @@ function InputSection(props) {
                 type = "submit"
                 name = "submit"
                 value = "Add note"
-            >+  </button>
+            >+</button>
 
         </form>
     )

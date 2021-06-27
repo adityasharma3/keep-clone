@@ -17,6 +17,15 @@ function App() {
       console.log(note);
   }
 
+  const onDelete = (id) => {
+    setAddItem((olddata) => 
+      olddata.filter((currdata , index) => {
+        return index !== id;
+      })
+      
+    )
+  }
+
   return (
     <div className="App">
       <Header/>
@@ -32,6 +41,7 @@ function App() {
                 id = {index}
                 title = {item.title}
                 description = {item.description}
+                deleteNote = {onDelete}
             />); 
         })}
       </div>

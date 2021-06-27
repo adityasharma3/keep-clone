@@ -17,7 +17,20 @@ const parastyle = {
     margin: '0 0 2rem 0'
 }
 
+function editBtnClicked() {
+    return (
+        // <EditNote />
+        alert('click edit btn')
+    );
+}
+
 function Notes(props) {
+
+    const deleteNote = () => {
+        props.deleteNote(props.id);
+    }
+
+
     return (
         <div className="notes">
             <div className="note">
@@ -25,17 +38,19 @@ function Notes(props) {
                     {props.title}
                 </h3>
                 
-                <p style={parastyle}>
+                <p style={parastyle} >
                     {props.description}
                 </p>
 
                 <AiFillDelete
                     className="delete-btn"
+                    onClick={deleteNote}
                     style={deleteBtn}
                 />
 
                 <AiFillEdit
                     className="edit-btn"
+                    onClick = {editBtnClicked}
                     style={editbtn}
                 />
 
